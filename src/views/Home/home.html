@@ -1,0 +1,39 @@
+<div class="page">
+  <div class="aside">
+    <div class="info">
+      <div class="name">{{resume.info.name}}</div>
+      <div class="job">
+        <p v-for="item,index in resume.info.job" :key="index">{{item}}</p>
+      </div>
+    </div>
+    <div class="info-container">
+      <primary-title primaryTitle="工作经历" subTitle="WORK EXPERICENCE"></primary-title>
+      <dd-box v-for="item,index in resume.workExperience" :key="index" :name="item.name" :desc="item.desc"></dd-box>
+      <primary-title primaryTitle="专业技能" subTitle="PROFESSIONAL SKILLS"></primary-title>
+      <dd-box v-for="item,index in resume.professionalSkills" :key="index" :name="item.name" :desc="item.desc"></dd-box>
+      <primary-title primaryTitle="实 践" subTitle="PRACTICE"></primary-title>
+      <dd-box v-for="item,index in resume.practice" :key="index" :name="item.name" :desc="item.desc"></dd-box>
+    </div>
+  </div>
+  <div class="content">
+    <div class="base-info">
+      <p>{{resume.info.address}} / {{resume.info.birth}} / {{resume.info.gender}}</p>
+      <p>
+        <span v-for="item,index in resume.info.school" :key="index">
+          <span v-if="index !== 0"> / </span>{{item}}
+        </span>
+      </p>
+      <p>
+        <span v-for="item,index in resume.info.experiences" :key="index">
+          <span v-if="index !== 0"> / </span>{{item}}
+        </span>
+      </p>
+    </div>
+    <div class="info-container">
+      <div v-for="item,index in resume.projects" :key="index">
+        <primary-title :primaryTitle="item.name" subTitle="PROJECT EXPERICENCE"></primary-title>
+        <dd-box v-for="pj, pIndex in item.children" :key="pIndex" :name="pj.name" :desc="pj.desc"></dd-box>
+      </div>
+    </div>
+  </div>
+</div>
