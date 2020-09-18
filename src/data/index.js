@@ -2,6 +2,7 @@ const workExperience = require('./workExperience')
 const professionalSkills = require('./professionalSkills')
 const practice = require('./practice')
 const projects = require('./projects')
+const courses = require('./courses')
 const resume = {
   info: {
     name: '田玉可',
@@ -20,9 +21,10 @@ const resume = {
     experiences: [
       '2 年校内项目组开发经验',
       '6 年前端开发工作经验',
-      '1 年管理 + 运维 + 全栈工作经验'
+      '3 年管理 + 运维 + 全栈工作经验'
     ]
   },
+  courses,
   workExperience,
   professionalSkills,
   practice,

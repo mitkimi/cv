@@ -9,6 +9,8 @@
     <div class="info-container">
       <primary-title primaryTitle="工作经历" subTitle="WORK EXPERICENCE"></primary-title>
       <dd-box v-for="item,index in resume.workExperience" :key="index" :name="item.name" :desc="item.desc"></dd-box>
+      <primary-title primaryTitle="课程与培训" subTitle="COURSES"></primary-title>
+      <dd-box v-for="item,index in resume.courses" :key="index" :name="item.name" :desc="item.desc"></dd-box>
       <primary-title primaryTitle="专业技能" subTitle="PROFESSIONAL SKILLS"></primary-title>
       <dd-box v-for="item,index in resume.professionalSkills" :key="index" :name="item.name" :desc="item.desc"></dd-box>
       <primary-title primaryTitle="实 践" subTitle="PRACTICE"></primary-title>
